@@ -1,7 +1,7 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "echo.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
-{{- $ingressPath := .Values.ingress.apth -}}
+{{- $ingressPath := .Values.ingress.path -}}
 {{- if semverCompare ">=1.14-0" .Capabilities.KubeVersion.GitVersion -}}
 apiVersion: networking.k8s.io/v1beta1
 {{- else -}}
@@ -11,8 +11,8 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ include  "echo.name" . }}
-    chart: {{ include  "echo.chart" . }}
+    app: {{ template "echo.name" . }}
+    chart: {{ template "echo.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}  
 {{- with .Values.ingress.annotations }}
