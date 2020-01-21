@@ -32,12 +32,9 @@ spec:
 {{- end }}
   rules:
   {{- range .Values.ingress.hosts }}
-    #- host: {{ .host | quote }}
     - host: {{ . }}
        http:
         paths:
-        #{{- range .paths }}
-         # - path: {{ . }}
           - path: {{ $ingressPath }}
             backend:
               serviceName: {{ $fullName }}
