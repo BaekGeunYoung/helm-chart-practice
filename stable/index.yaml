@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  echo:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-01-21T17:11:48.032117552+09:00"
+    description: A Helm chart for Kubernetes
+    digest: f9c0f0e95aa3395eae3c60614da9a76cc02828e59db8b4178e08cdf4fb9a05f1
+    name: echo
+    type: application
+    urls:
+    - echo-0.1.0.tgz
+    version: 0.1.0
   example:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-01-21T17:06:15.314606918+09:00"
+    created: "2020-01-21T17:11:48.032638191+09:00"
     description: A Helm chart for Kubernetes
     digest: 31777ef42b7df76b4c76156cfb0b73c2b571676d2f8ca1628e60a6cba58d7005
     name: example
@@ -11,4 +22,4 @@ entries:
     urls:
     - example-0.1.0.tgz
     version: 0.1.0
-generated: "2020-01-21T17:06:15.312835931+09:00"
+generated: "2020-01-21T17:11:48.03150449+09:00"
