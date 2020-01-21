@@ -11,8 +11,8 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "echo.name" . }}
-    chart: {{ template "echo.chart" . }}
+    app: echo
+    chart: echo-chart
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}  
 {{- with .Values.ingress.annotations }}
